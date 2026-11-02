@@ -1,0 +1,18 @@
+{
+  "name": "byt-watchdog",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rental flat watchdog for Praha (Sreality, Bezrealitky, iDNES) with ntfy alerts. Zero dependencies.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.mjs",
+    "dry-run": "node src/index.mjs --dry-run",
+    "lint": "node scripts/check-syntax.mjs",
+    "test": "node --test test/",
+    "verify:quick": "node scripts/check-syntax.mjs",
+    "verify": "node scripts/check-syntax.mjs && node --test test/"
+  }
+}
