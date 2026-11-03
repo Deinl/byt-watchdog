@@ -2,7 +2,7 @@
 
 > L2 — sprint living doc. Short-term only.
 
-Last updated: 2026-11-02
+Last updated: 2026-11-03
 
 ## 🔒 Dan's Notes — OWNER: Dan ONLY (agents: read-only)
 <!-- HARD RULE — agents NEVER touch this section. ONLY Dan edits it, by hand. -->
@@ -15,24 +15,23 @@ Last updated: 2026-11-02
 
 ---
 
-## Last Session — 2026-11-02
-- **Branch:** feature/initial-watchdog (new local repo, no remote, `master` still unborn)
-- **What was done:** initial build — Sreality + Bezrealitky + iDNES, filters config, dedupe state, ntfy + dry-run, Actions workflow, tests.
+## Last Session — 2026-11-03
+- **Branch:** master, pushed to public repo `Deinl/byt-watchdog`
+- **What was done:** published repo, set `NTFY_TOPIC` Actions secret, sent one test push (HTTP 200), ran first `workflow_dispatch` = seed run (sreality 24, bezrealitky 6, idnes 7 matched; 30 seeded, 7 cross-portal dupes).
 - **In progress:** nothing
 - **Blockers:** none
-- **Next steps:** Dan publishes the repo, adds `NTFY_TOPIC` secret, runs `workflow_dispatch` once (seed run), then watches alerts.
+- **Next steps:** watch first days of real alerts; tune filters on false positives; bump Actions to Node 24 versions (deprecation warning).
 
 ## Critical / Blockers
 (none)
 
 ## Status Overview
-Works locally in dry-run against live portals; not deployed.
+Live: GitHub Actions cron every 10 min, alerts via ntfy. Topic stored outside the repo for Dan.
 
 ## Sprint Phase
 Phase: S0 — MVP
 
 ## Active Backlog
-- P1: Publish repo + secret + first manual dispatch (Dan).
 - P1: Watch first days of alerts; tune `excludeQuarters` / fee parsing on false positives.
 - P2: UlovDomov portal (map its client API).
 - P2: iDNES detail fetch for 15 001–17 000 listings to learn fees.
